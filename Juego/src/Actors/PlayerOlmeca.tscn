@@ -53,7 +53,7 @@ tracks/0/keys = {
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 87.7359, 173.028 )
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D"]
 scale = Vector2( 0.146196, 0.146196 )
 collision_mask = 14
 script = ExtResource( 2 )

@@ -1,0 +1,101 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/Scripts/UserInterface.gd" type="Script" id=1]
+[ext_resource path="res://assets/coin/coin_01.png" type="Texture" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0.529412 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="UserInterface" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -118.41
+margin_top = 0.749146
+margin_right = -78.4103
+margin_bottom = 40.7491
+rect_scale = Vector2( 2.95635, 1.04029 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreLabel" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -58.7435
+margin_top = 7.56079
+margin_right = -18.7435
+margin_bottom = 21.5608
+rect_scale = Vector2( 2.02628, 1.91224 )
+text = "00"
+uppercase = true
+percent_visible = -0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -94.7036
+margin_top = 2.08111
+margin_right = -49.7036
+margin_bottom = 50.0811
+rect_scale = Vector2( 0.737985, 0.725077 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseOverlay" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -0.396973
+margin_right = -0.396973
+color = Color( 0, 0, 0, 0.235294 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PauseOverlay"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -93.9475
+margin_top = -155.332
+margin_right = 1.05249
+margin_bottom = -141.332
+rect_scale = Vector2( 2.37724, 2.37724 )
+text = "Juego en pausa"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseMenu" type="VBoxContainer" parent="PauseOverlay"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -106.974
+margin_top = -105.56
+margin_right = -66.9742
+margin_bottom = -65.56
+rect_scale = Vector2( 6.21626, 5.93415 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

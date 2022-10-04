@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
-const moveSpeed = 25
-const maxSpeed = 50
+const moveSpeed = 50
+const maxSpeed = 85
 
 const jumpHeight = -300
 const up = Vector2(0,-1)
@@ -47,3 +47,4 @@ func _physics_process(delta):
 			motion.x=lerp(motion.x,0,0.01)
 		
 	motion = move_and_slide(motion,up);
+
