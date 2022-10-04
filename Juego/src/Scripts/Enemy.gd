@@ -23,3 +23,8 @@ func _physics_process(delta: float) -> void:
 	
 	velocity = move_and_slide(velocity, Vector2.UP)
 	
+	
+func _on_CollisionArea_body_entered(body):
+	if body.get_name() == "Player":
+		print("Colision jugador")
+		get_tree().reload_current_scene()

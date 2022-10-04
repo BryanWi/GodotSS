@@ -3,7 +3,7 @@ extends KinematicBody2D
 const moveSpeed = 50
 const maxSpeed = 85
 
-const jumpHeight = -300
+const jumpHeight = -350
 const up = Vector2(0,-1)
 const gravity = 15
 onready var sprite = $Sprite
