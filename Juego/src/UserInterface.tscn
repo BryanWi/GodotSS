@@ -42,7 +42,6 @@ margin_bottom = 21.5608
 rect_scale = Vector2( 2.02628, 1.91224 )
 text = "00"
 uppercase = true
-percent_visible = -0.5
 __meta__ = {
 "_edit_use_anchors_": false
 }

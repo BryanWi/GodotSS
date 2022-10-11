@@ -20,8 +20,8 @@ tracks/0/keys = {
 "values": [ 0, 1, 1 ]
 }
 
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 63.2938, 31.5374 )
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 61.2463, 27.0487 )
 
 [node name="Enemy" type="KinematicBody2D"]
 scale = Vector2( 0.263374, 0.263374 )
@@ -39,18 +39,16 @@ playback_speed = 1.4
 anims/Walking = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 10.5064, -3.1283 )
-scale = Vector2( 1, 1 )
-shape = SubResource( 4 )
+position = Vector2( 8.15719, -4.4707 )
+shape = SubResource( 2 )
 
 [node name="CollisionArea" type="Area2D" parent="."]
 position = Vector2( 1.48885, -3.1283 )
-scale = Vector2( 1, 1 )
 collision_layer = 2
 collision_mask = 9
 
 [node name="CollisionDetector" type="CollisionShape2D" parent="CollisionArea"]
-position = Vector2( 8.06836, -0.474609 )
+position = Vector2( 5.04796, -1.48145 )
 scale = Vector2( 1.04877, 1.05959 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 [connection signal="body_entered" from="CollisionArea" to="." method="_on_CollisionArea_body_entered"]
