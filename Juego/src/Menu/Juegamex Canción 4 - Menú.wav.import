@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Juegamex Canción 4 - Menú.wav-04d33636d5c2b829dd71b4c540341153.sample"
+
+[deps]
+
+source_file="res://src/Menu/Juegamex Canción 4 - Menú.wav"
+dest_files=[ "res://.import/Juegamex Canción 4 - Menú.wav-04d33636d5c2b829dd71b4c540341153.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
