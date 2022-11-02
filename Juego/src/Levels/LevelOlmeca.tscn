@@ -494,7 +494,6 @@ layer = 128
 
 [node name="Area2D" parent="." instance=ExtResource( 11 )]
 position = Vector2( 89.7968, 122.909 )
-scale = Vector2( 1.32162, 1.32162 )
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( -1, 0 )
@@ -604,7 +603,6 @@ scale = Vector2( 0.0611222, 0.0611222 )
 script = ExtResource( 13 )
 
 [node name="CabezaOlmeca" type="Sprite" parent="Cabeza"]
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cabeza"]

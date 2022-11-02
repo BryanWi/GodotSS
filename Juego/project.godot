@@ -21,8 +21,8 @@ _global_script_class_icons={
 [application]
 
 config/name="ServicioSocial"
-run/main_scene="res://src/Levels/LevelOlmeca.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://src/Menu/MainMenu.tscn"
+config/icon="res://src/Menu/quetzalcoatl.png"
 
 [autoload]
 
