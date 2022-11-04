@@ -359,7 +359,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 15/shapes = [  ]
 15/z_index = 0
 
-[node name="LevelMaya" type="Node"]
+[node name="LevelMaya" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 14 )
