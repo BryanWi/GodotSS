@@ -87,4 +87,5 @@ custom_colors/font_color_pressed = Color( 0.407843, 0, 1, 1 )
 text = "Jugar"
 flat = true
 script = ExtResource( 2 )
+[connection signal="button_up" from="VBoxContainer/VBoxContainer/Button" to="VBoxContainer/VBoxContainer/Button" method="_on_Button_button_up"]
 [connection signal="pressed" from="VBoxContainer/VBoxContainer/Button" to="VBoxContainer/VBoxContainer/Button" method="_on_Button_pressed"]

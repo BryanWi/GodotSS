@@ -15,7 +15,8 @@ func _physics_process(delta):
 	$"Indicator".visible = finished
 	if Input.is_action_just_pressed("ui_accept"):
 		load_dialog()
-	
+
+#Funcion que carga el dialogo linea por linea en el array
 func load_dialog():
 	if dialog_index < dialog.size():
 		finished = false
@@ -31,6 +32,6 @@ func load_dialog():
 		
 	dialog_index += 1
 
-
+#Verifica que el dialogo haya terminado para desaparecer la caja de dialogo
 func _on_Tween_tween_completed(object, key):
 	finished = true

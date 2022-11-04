@@ -1,7 +1,7 @@
 extends Area2D
 
 var interactable = false
-const DIALOG = preload("res://src/DialogueBox.tscn")
+const DIALOG = preload("res://src/Levels/NPC1/DialogueBox.tscn")
 
 func _physics_process(delta):
 	$AnimatedSprite.play()
