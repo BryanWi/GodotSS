@@ -8,7 +8,7 @@
 [ext_resource path="res://src/Coin.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/UserInterface.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/DeadZone.tscn" type="PackedScene" id=8]
-[ext_resource path="res://src/Actors/Enemy.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Actors/Jaguar.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/sounds/Canción Nivel 1.wav" type="AudioStream" id=10]
 [ext_resource path="res://src/NPC.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/CabezaOlmeca.png" type="Texture" id=12]
