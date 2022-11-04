@@ -25,3 +25,10 @@ func set_paused(value: bool) -> void:
 	paused = value
 	scene_tree.paused = value
 	pause_overlay.visible = value
+
+
+func _on_Regresar_button_up() -> void:
+	self.paused = false
+
+func _on_Salir_button_up() -> void:
+	scene_tree.change_scene("res://src/Menu/MainMenu.tscn")
