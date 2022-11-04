@@ -1,9 +1,10 @@
 extends Area2D
 
 export var score: = 1
+onready var coinSound = $AudioStreamPlayer
 
 func _on_Coin2D_body_entered(body):
-	$SoundCoinCollected.play(0)
+	if coinSound.is_playing() == false:
+		coinSound.play()
 	queue_free()
-	print("coin")
 	PlayerData.score += score
