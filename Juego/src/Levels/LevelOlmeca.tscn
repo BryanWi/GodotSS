@@ -492,7 +492,7 @@ layer = 128
 
 [node name="UserInterface" parent="UserInterface" instance=ExtResource( 7 )]
 
-[node name="Area2D" parent="." instance=ExtResource( 11 )]
+[node name="NPC" parent="." instance=ExtResource( 11 )]
 position = Vector2( 89.7968, 122.909 )
 
 [node name="TileMap" type="TileMap" parent="."]
