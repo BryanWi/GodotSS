@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/Rocky Roads/tileset forest.png" type="Texture" id=1]
 [ext_resource path="res://src/Actors/PlayerMaya.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/sounds/Canción Nivel Maya.wav" type="AudioStream" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -369,3 +370,8 @@ tile_data = PoolIntArray( -262163, 14, 0, -262162, 14, 0, -262161, 9, 0, -196627
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -100.672, 0.890884 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -10.0
+autoplay = true
