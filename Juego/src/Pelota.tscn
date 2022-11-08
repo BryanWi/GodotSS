@@ -30,7 +30,7 @@ script = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="pelota cronograma" type="Sprite" parent="."]
-position = Vector2( 0.0352981, 0.159689 )
+position = Vector2( 0.0352981, -0.677007 )
 scale = Vector2( 0.047121, 0.047121 )
 texture = ExtResource( 1 )
 

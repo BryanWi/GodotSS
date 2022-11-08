@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/sounds/Sonido Moneda.wav" type="AudioStream" id=1]
+[ext_resource path="res://assets/JarronJade.png" type="Texture" id=2]
+[ext_resource path="res://src/LevelOlmeca/JarronScript.gd" type="Script" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 8.0
+height = 11.0
+
+[sub_resource type="Animation" id=2]
+resource_name = "Idle"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0.125 ), Vector2( 0, -0.875 ), Vector2( 0, 0.125 ) ]
+}
+
+[node name="Jarron2D" type="Area2D"]
+collision_layer = 4
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 0.125 )
+shape = SubResource( 1 )
+
+[node name="JarronJade" type="Sprite" parent="CollisionShape2D"]
+position = Vector2( -0.109295, -0.068768 )
+scale = Vector2( 0.0200647, 0.0200647 )
+texture = ExtResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -20.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Idle"
+playback_speed = 0.2
+anims/Idle = SubResource( 2 )
+[connection signal="body_entered" from="." to="." method="_on_Jarron2D_body_entered"]
