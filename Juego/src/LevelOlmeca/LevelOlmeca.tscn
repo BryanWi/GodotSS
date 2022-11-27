@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://assets/jungle tileset.png" type="Texture" id=1]
 [ext_resource path="res://src/Actors/PlayerOlmeca.tscn" type="PackedScene" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://src/LevelOlmeca/NPC1/NPC.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/CabezaOlmeca.png" type="Texture" id=12]
 [ext_resource path="res://src/Scripts/EndLevel.gd" type="Script" id=13]
+[ext_resource path="res://src/LevelOlmeca/NPC2/NPC2.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/LevelOlmeca/NPC3/NPC3.tscn" type="PackedScene" id=15]
 
 [sub_resource type="GDScript" id=1]
 
@@ -495,6 +497,12 @@ layer = 128
 [node name="NPC1" parent="." instance=ExtResource( 11 )]
 position = Vector2( 48.6985, 117.628 )
 
+[node name="NPC2" parent="." instance=ExtResource( 14 )]
+position = Vector2( 854.977, 118.247 )
+
+[node name="NPC3" parent="." instance=ExtResource( 15 )]
+position = Vector2( 3030.25, 102.739 )
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( -1, 0 )
 tile_set = SubResource( 18 )
@@ -510,6 +518,7 @@ tile_data = PoolIntArray( -262178, 13, 0, -262177, 13, 0, -262176, 13, 0, -26217
 motion_mirroring = Vector2( 500, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( -0.749146, 5.99323 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 offset = Vector2( 0, 10 )
@@ -598,7 +607,7 @@ position = Vector2( 1056.98, 133.594 )
 position = Vector2( 461.989, 132.149 )
 
 [node name="Cabeza" type="Area2D" parent="."]
-position = Vector2( 3116.2, 97.3373 )
+position = Vector2( 3154.93, 94.5311 )
 scale = Vector2( 0.0611222, 0.0611222 )
 script = ExtResource( 13 )
 
@@ -606,7 +615,7 @@ script = ExtResource( 13 )
 texture = ExtResource( 12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cabeza"]
-position = Vector2( 84.6367, 69.0582 )
+position = Vector2( 94.3672, 69.0582 )
 shape = SubResource( 19 )
 [connection signal="body_entered" from="DeadZone" to="DeadZone" method="_on_DeadZone_body_entered"]
 [connection signal="body_entered" from="Cabeza" to="Cabeza" method="_on_Cabeza_body_entered"]

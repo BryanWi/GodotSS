@@ -1,13 +1,10 @@
 extends Control
 var dialog = [
-	"Hola jugador",
-	"Mi nombre es Kukulcan, también soy conocido como Quetzalcoatl el dios serpiente.",
-	"Soy el encargado de guiarte durante tu larga travesía a través de las distintas culturas del antiguo México.",
-	"Durante tus misiones apareceré varias veces para contarte una historia o para guiarte. Así que cuando me veas, acercate a mí y presiona la tecla E",
-	"Tu misión es llevar como ofrenda los jarrones a la cabeza grande de piedra, pero te encontrarás con un obstáculo…",
-	"Te encontrarás con jaguares, por lo que tendrás que esquivarlos, no los puedes dañar ya que para tu gente son dioses y alabados por todos.",
-	"Mucha suerte! y recuerda...", 
-	"Los jaguares son muy importantes para la naturaleza y para ti."
+	"La cabeza de adelante fue lo que los hizo famosos. Los olmecas tallaban caras de piedra gigantes...",
+	"Algo que intrigo mucho a los investigadores.",
+	"Para hacer la ofrenda solo acercate a la cabeza, pero antes de eso...", 
+	"Asegurate de tener 16 jarrones de jade, estos los puedes ver en la esquina superior izquierda",
+	"Si se te paso alguno, es momento de regresar y recolectar los faltantes."
 ]
 var dialog_index = 0
 var finished = false

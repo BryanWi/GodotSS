@@ -1,13 +1,11 @@
 extends Control
 var dialog = [
-	"Hola jugador",
-	"Mi nombre es Kukulcan, también soy conocido como Quetzalcoatl el dios serpiente.",
-	"Soy el encargado de guiarte durante tu larga travesía a través de las distintas culturas del antiguo México.",
-	"Durante tus misiones apareceré varias veces para contarte una historia o para guiarte. Así que cuando me veas, acercate a mí y presiona la tecla E",
-	"Tu misión es llevar como ofrenda los jarrones a la cabeza grande de piedra, pero te encontrarás con un obstáculo…",
-	"Te encontrarás con jaguares, por lo que tendrás que esquivarlos, no los puedes dañar ya que para tu gente son dioses y alabados por todos.",
-	"Mucha suerte! y recuerda...", 
-	"Los jaguares son muy importantes para la naturaleza y para ti."
+	"Probablemente no sepas quien eres, pero para eso estoy aquí, tú eres un olmeca",
+	"Los olmecas fueron la primera civilización en todo mesoamérica, con sus propias sociedades y centros urbanos...",
+	"Eran famosos por sus grandes esculturas, el chocolate, maíz y sus figuras extrañas.",
+	"Por ser los primeros en ser una civilización, las proximas civilizaciones les copiaron algunas cosas tales como...",
+	"El arte en la cerámica y en el jade y en las criaturas como lo que soy yo, un dios serpiente.",
+	"Los olmecas nacieron 1,200 años antes de que naciera Cristo y se extinguieron 400 años antes de cristo. Duraron 800 años."
 ]
 var dialog_index = 0
 var finished = false
