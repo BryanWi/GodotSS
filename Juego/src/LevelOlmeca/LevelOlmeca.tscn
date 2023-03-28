@@ -526,7 +526,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 4000, 750 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -82.8283, 8.82942 )
+position = Vector2( -96, 104 )
 
 [node name="DeadZone" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1743.28, 205.784 )
@@ -617,5 +617,6 @@ texture = ExtResource( 12 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cabeza"]
 position = Vector2( 94.3672, 69.0582 )
 shape = SubResource( 19 )
+
 [connection signal="body_entered" from="DeadZone" to="DeadZone" method="_on_DeadZone_body_entered"]
 [connection signal="body_entered" from="Cabeza" to="Cabeza" method="_on_Cabeza_body_entered"]

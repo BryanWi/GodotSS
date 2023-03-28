@@ -61,8 +61,8 @@ script = ExtResource( 2 )
 position = Vector2( -0.0561825, 0.0450383 )
 scale = Vector2( 0.139423, 0.139423 )
 texture = ExtResource( 1 )
-vframes = 2
 hframes = 7
+vframes = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 playback_speed = 1.4

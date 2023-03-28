@@ -6,6 +6,7 @@ const maxSpeed = 85
 const jumpHeight = -350
 const up = Vector2(0,-1)
 const gravity = 15
+var is_running:bool = false
 onready var sprite = $Sprite
 onready var animationPlayer = $AnimationPlayer
 onready var jumpSound = $AudioStreamPlayer
@@ -54,6 +55,10 @@ func _physics_process(delta):
 	else:
 		if friction ==true:
 			motion.x=lerp(motion.x,0,0.01)
-		
-	motion = move_and_slide(motion,up);
-
+			
+	if Input.is_action_just_pressed("shift"):
+		is_running = true
+	if Input.is_action_just_released("shift"):
+		is_running = false
+	motion.x = motion.x * (1+0.5*float(is_running))
+	motion = move_and_slide(motion,up)

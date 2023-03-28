@@ -12,17 +12,17 @@ outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=2]
-size = 35
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 4 )
-
 [sub_resource type="DynamicFont" id=3]
 size = 35
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 35
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
 
 [node name="LevelSelector" type="Node"]
 
@@ -39,42 +39,156 @@ margin_bottom = 76.0
 custom_fonts/font = SubResource( 1 )
 text = "Niveles"
 align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CabezaOlmeca" type="Sprite" parent="."]
-position = Vector2( 159.109, 177.43 )
-scale = Vector2( 0.122404, 0.122404 )
-texture = ExtResource( 3 )
-
-[node name="Olmecas" type="Button" parent="."]
-margin_left = 95.3261
-margin_top = 264.597
-margin_right = 244.326
-margin_bottom = 306.597
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color_hover = Color( 0.447059, 0.447059, 0.447059, 1 )
-custom_colors/font_color_pressed = Color( 0.407843, 0, 1, 1 )
-text = "Olmecas"
-flat = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Button" type="Button" parent="."]
 margin_left = 16.9271
 margin_top = 677.083
 margin_right = 160.927
 margin_bottom = 715.083
-custom_fonts/font = SubResource( 3 )
 custom_colors/font_color_hover = Color( 0.447059, 0.447059, 0.447059, 1 )
 custom_colors/font_color_pressed = Color( 0.407843, 0, 1, 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Regresar"
 flat = true
 script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-[connection signal="pressed" from="Olmecas" to="Button" method="_on_Olmecas_pressed"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -490.0
+margin_top = -270.0
+margin_right = 490.0
+margin_bottom = 270.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 980.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 0, 270 )
+alignment = 1
+
+[node name="Olmeca" type="Control" parent="VBoxContainer/HBoxContainer"]
+margin_left = 141.0
+margin_right = 371.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 230, 270 )
+
+[node name="CabezaOlmeca" type="Sprite" parent="VBoxContainer/HBoxContainer/Olmeca"]
+position = Vector2( 109.109, 88.233 )
+scale = Vector2( 0.122404, 0.122404 )
+texture = ExtResource( 3 )
+
+[node name="Olmecas" type="Button" parent="VBoxContainer/HBoxContainer/Olmeca"]
+margin_left = 45.3261
+margin_top = 175.4
+margin_right = 194.326
+margin_bottom = 217.4
+custom_colors/font_color_hover = Color( 0.447059, 0.447059, 0.447059, 1 )
+custom_colors/font_color_pressed = Color( 0.407843, 0, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Olmecas"
+flat = true
+
+[node name="Maya" type="Control" parent="VBoxContainer/HBoxContainer"]
+margin_left = 375.0
+margin_right = 605.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 230, 270 )
+
+[node name="IconoMaya" type="Sprite" parent="VBoxContainer/HBoxContainer/Maya"]
+position = Vector2( 109.109, 88.233 )
+scale = Vector2( 0.122404, 0.122404 )
+texture = ExtResource( 3 )
+
+[node name="Maya" type="Button" parent="VBoxContainer/HBoxContainer/Maya"]
+margin_left = 45.3261
+margin_top = 175.4
+margin_right = 194.326
+margin_bottom = 217.4
+custom_colors/font_color_hover = Color( 0.447059, 0.447059, 0.447059, 1 )
+custom_colors/font_color_pressed = Color( 0.407843, 0, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Maya"
+flat = true
+
+[node name="Azteca" type="Control" parent="VBoxContainer/HBoxContainer"]
+margin_left = 609.0
+margin_right = 839.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 230, 270 )
+
+[node name="IconoAzteca" type="Sprite" parent="VBoxContainer/HBoxContainer/Azteca"]
+position = Vector2( 109.109, 88.233 )
+scale = Vector2( 0.122404, 0.122404 )
+texture = ExtResource( 3 )
+
+[node name="Azteca" type="Button" parent="VBoxContainer/HBoxContainer/Azteca"]
+margin_left = 45.3261
+margin_top = 175.4
+margin_right = 194.326
+margin_bottom = 217.4
+custom_colors/font_color_hover = Color( 0.447059, 0.447059, 0.447059, 1 )
+custom_colors/font_color_pressed = Color( 0.407843, 0, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Azteca"
+flat = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 274.0
+margin_right = 980.0
+margin_bottom = 544.0
+rect_min_size = Vector2( 0, 270 )
+alignment = 1
+
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 258.0
+margin_right = 488.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 230, 270 )
+rect_pivot_offset = Vector2( -960, -222 )
+
+[node name="CabezaOlmeca" type="Sprite" parent="VBoxContainer/HBoxContainer2/Control"]
+position = Vector2( 109.109, 88.233 )
+scale = Vector2( 0.122404, 0.122404 )
+texture = ExtResource( 3 )
+
+[node name="Olmecas" type="Button" parent="VBoxContainer/HBoxContainer2/Control"]
+margin_left = 45.3261
+margin_top = 175.4
+margin_right = 194.326
+margin_bottom = 217.4
+custom_colors/font_color_hover = Color( 0.447059, 0.447059, 0.447059, 1 )
+custom_colors/font_color_pressed = Color( 0.407843, 0, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Olmecas"
+flat = true
+
+[node name="Control2" type="Control" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 492.0
+margin_right = 722.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 230, 270 )
+
+[node name="CabezaOlmeca" type="Sprite" parent="VBoxContainer/HBoxContainer2/Control2"]
+position = Vector2( 109.109, 88.233 )
+scale = Vector2( 0.122404, 0.122404 )
+texture = ExtResource( 3 )
+
+[node name="Olmecas" type="Button" parent="VBoxContainer/HBoxContainer2/Control2"]
+margin_left = 45.3261
+margin_top = 175.4
+margin_right = 194.326
+margin_bottom = 217.4
+custom_colors/font_color_hover = Color( 0.447059, 0.447059, 0.447059, 1 )
+custom_colors/font_color_pressed = Color( 0.407843, 0, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Olmecas"
+flat = true
+
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Olmeca/Olmecas" to="Button" method="_on_Olmecas_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Maya/Maya" to="Button" method="_on_Olmecas_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Azteca/Azteca" to="Button" method="_on_Olmecas_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/Control/Olmecas" to="Button" method="_on_Olmecas_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/Control2/Olmecas" to="Button" method="_on_Olmecas_pressed"]

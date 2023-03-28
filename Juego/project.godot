@@ -27,11 +27,14 @@ config/icon="res://src/Menu/quetzalcoatl.png"
 [autoload]
 
 PlayerData="*res://src/PlayerData.tscn"
+Global="*res://src/Scripts/singleton/Global.gd"
 
 [display]
 
 window/size/width=1080
 window/size/height=720
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
 
 [input]
 
@@ -64,6 +67,11 @@ move_right={
 pause={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+shift={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777237,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
 
